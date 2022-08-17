@@ -36,6 +36,7 @@ namespace RemoteServer
 
             //Don't forget to close the host after you're done!
             host.Close();
+
         }
     }
 }
