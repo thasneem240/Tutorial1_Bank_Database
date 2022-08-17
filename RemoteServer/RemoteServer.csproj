@@ -44,12 +44,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BankServerImplementation.cs" />
     <Compile Include="BankServerInterface.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tutorial1_Simple_WPF_APP\Tutorial1_Simple_WPF_APP.csproj">
+      <Project>{D9069F49-4012-46AE-9492-8922BE5557A4}</Project>
+      <Name>Tutorial1_Simple_WPF_APP</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
