@@ -9,7 +9,7 @@ namespace Tutorial1_Simple_WPF_APP
 {
     public class DatabaseClass
     {
-        List<DataStruct> dataStructList;
+        public List<DataStruct> dataStructList;
         DatabaseGenerator databaseGenerator;
 
         public DatabaseClass()
@@ -17,14 +17,22 @@ namespace Tutorial1_Simple_WPF_APP
             dataStructList = new List<DataStruct>(); // list of data struct object
             databaseGenerator = new DatabaseGenerator(); // database geneartor
 
-            DataStruct dataStruct = new DataStruct();
+            for (int i = 0; i < 10; i++) 
+            {
+                /* Create a DataStruct Object */
 
-            /* Generate the Data */
-            databaseGenerator.GetNextAccount(out dataStruct.pin, out dataStruct.accNo, 
-                out dataStruct.firstName,out dataStruct.lastName,out dataStruct.balance);
+                DataStruct dataStruct = new DataStruct();
 
-            /* Load the data into a List */
-            dataStructList.Add(dataStruct);
+                /* Generate the Data */
+
+                databaseGenerator.GetNextAccount(out dataStruct.pin, out dataStruct.accNo, 
+                    out dataStruct.firstName,out dataStruct.lastName,out dataStruct.balance);
+
+                /* Load the data into a List */
+
+                dataStructList.Add(dataStruct);
+            }
+            
         }
 
 
@@ -60,5 +68,6 @@ namespace Tutorial1_Simple_WPF_APP
         {
             return dataStructList.Count;
         }
+
     }
 }
