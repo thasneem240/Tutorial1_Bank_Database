@@ -9,7 +9,7 @@ namespace Tutorial1_Simple_WPF_APP
 {
     public class DatabaseClass
     {
-        public List<DataStruct> dataStructList;
+        List<DataStruct> dataStructList;
         DatabaseGenerator databaseGenerator;
 
         public DatabaseClass()

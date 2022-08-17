@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tutorial1_Simple_WPF_APP
 {
-    public class DataStruct
+    internal class DataStruct
     {
         public uint accNo;
         public uint pin;
