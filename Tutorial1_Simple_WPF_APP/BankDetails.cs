@@ -41,6 +41,16 @@ namespace Bank_Database
         }
 
 
+        /* get Next Account Info */
+        public void GetNextAccount(out uint pin, out uint accNo,out string firstName,
+            out string lastName,out int balance) 
+        {
+            pin = GetPIN();
+            accNo = GetAcctNo();
+            firstName = GetFirstname();
+            lastName = GetLastname();
+            balance = GetBalance();
+        }
 
 
     }
