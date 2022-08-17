@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tutorial1_Simple_WPF_APP
 {
-    internal class DatabaseStorage
+    internal class DataStruct
     {
         public uint accNo;
         public uint pin;
@@ -14,7 +14,7 @@ namespace Tutorial1_Simple_WPF_APP
         public string firstName;
         public string lastName;
 
-        public DatabaseStorage()
+        public DataStruct()
         {
             accNo = 0;
             pin = 0; 
