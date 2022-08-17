@@ -14,6 +14,7 @@ namespace RemoteServer
         /* Reference to the database Class*/
 
         DatabaseClass database;
+
         public BankServerImplementation()
         {
             database = new DatabaseClass();
