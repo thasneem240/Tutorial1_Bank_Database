@@ -43,5 +43,32 @@ namespace Client
             //Also, tell me how many entries are in the DB.
             pTotalItem.Text = foob.GetNumEntries().ToString();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            int index = 0;
+            string fName = "", lName = "";
+            int bal = 0;
+            uint acct = 0, pin = 0;
+
+            /* index = Convert.ToInt32(pIndex.Text);
+            In brief, int.Parse and Convert ToInt32 are two methods to convert a string to an integer. 
+            The main difference between int Parse and Convert ToInt32 in C# is that 
+            passing a null value to int Parse will throw an ArgumentNullException
+            while passing a null value to Convert ToInt32 will give zero.*/
+
+            //On click, Get the index....
+            index = Int32.Parse(pIndex.Text);
+
+            //Then, run our RPC function, using the out mode parameters... And Get All the Values for out
+            foob.GetValuesForEntry(index, out acct, out pin,out bal, out fName, out lName);
+
+            pFirstName.Text = fName;
+            pLastName.Text = lName;
+            pAccNum.Text = acct.ToString();
+            pPinNo.Text = pin.ToString();
+            pBalance.Text = bal.ToString();
+            
+        }
     }
 }
