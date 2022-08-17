@@ -9,7 +9,6 @@ namespace Bank_Database
 {
     internal class DatabaseGenerator
     {
-        static void Main() { }
 
         /* Random Object to Create random Numbers and Strings */
 
