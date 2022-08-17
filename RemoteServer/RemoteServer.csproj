@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{56FCA90A-B253-475C-872D-CD7BE05D00BB}</ProjectGuid>
+    <ProjectGuid>{2D9F7DF5-8508-476C-B986-7722CFE34E9D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>RemoteServer</RootNamespace>
     <AssemblyName>RemoteServer</AssemblyName>
@@ -53,9 +53,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Tutorial1_Simple_WPF_APP\Tutorial1_Simple_WPF_APP.csproj">
-      <Project>{D9069F49-4012-46AE-9492-8922BE5557A4}</Project>
-      <Name>Tutorial1_Simple_WPF_APP</Name>
+    <ProjectReference Include="..\BankDatabase\BankDatabase.csproj">
+      <Project>{EFC18B36-09BC-4E6F-8DD8-21B4230DA13D}</Project>
+      <Name>BankDatabase</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

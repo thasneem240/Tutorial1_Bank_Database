@@ -20,13 +20,13 @@ namespace Bank_Database
             "Milton", "Claude", "Joshua", "Glen", "Harvey", "Blake", "Antonio", "Connor", "Julian", "Aidan"};
 
         private string[] arrOfLastName = {"Thasneem", "Terry", "Shelton", "Miles", "Lucas", "Fletcher",
-            "Parks", "Norris", "Guzman", "Daniel", "Newton", "Potter", "Francis", "Erickson", "Norman", 
-            "Moody", "Lindsey", "Gross", "Sherman", "Simon", "Jones", "Brown", "Garcia", "Rodriguez", 
+            "Parks", "Norris", "Guzman", "Daniel", "Newton", "Potter", "Francis", "Erickson", "Norman",
+            "Moody", "Lindsey", "Gross", "Sherman", "Simon", "Jones", "Brown", "Garcia", "Rodriguez",
             "Lee", "Young", "Hall" };
 
 
-        
-        private string GetFirstname() 
+
+        private string GetFirstname()
         {
             int index = rand.Next(arrOfFirstName.Length);
             string fName = arrOfFirstName[index];
@@ -47,14 +47,14 @@ namespace Bank_Database
         }
 
 
-        private uint GetAcctNo() 
+        private uint GetAcctNo()
         {
-            uint accNo = Convert.ToUInt32(rand.Next(1000000,10000000));
+            uint accNo = Convert.ToUInt32(rand.Next(1000000, 10000000));
             return accNo;
         }
 
 
-        private int GetBalance() 
+        private int GetBalance()
         {
             int accBal = rand.Next(1000, 1000000000);
             return accBal;
@@ -62,8 +62,8 @@ namespace Bank_Database
 
 
         /* get Next Account Info */
-        public void GetNextAccount(out uint pin, out uint accNo,out string firstName,
-            out string lastName,out int balance) 
+        public void GetNextAccount(out uint pin, out uint accNo, out string firstName,
+            out string lastName, out int balance)
         {
             pin = GetPIN();
             accNo = GetAcctNo();

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tutorial1_Simple_WPF_APP
+namespace Bank_Database
 {
     internal class DataStruct
     {
@@ -17,7 +17,7 @@ namespace Tutorial1_Simple_WPF_APP
         public DataStruct()
         {
             accNo = 0;
-            pin = 0; 
+            pin = 0;
             balance = 0;
             firstName = "";
             lastName = "";

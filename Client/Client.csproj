@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3F26A156-036B-4CDB-82EF-CB8CAAD353CE}</ProjectGuid>
+    <ProjectGuid>{3A12FAEB-1F77-4E73-BADB-086E5F07164A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Client</RootNamespace>
     <AssemblyName>Client</AssemblyName>
@@ -97,7 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RemoteServer\RemoteServer.csproj">
-      <Project>{56FCA90A-B253-475C-872D-CD7BE05D00BB}</Project>
+      <Project>{2D9F7DF5-8508-476C-B986-7722CFE34E9D}</Project>
       <Name>RemoteServer</Name>
     </ProjectReference>
   </ItemGroup>

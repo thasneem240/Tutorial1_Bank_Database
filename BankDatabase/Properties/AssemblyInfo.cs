@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Tutorial1_Simple_WPF_APP")]
+[assembly: AssemblyTitle("BankDatabase")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Tutorial1_Simple_WPF_APP")]
+[assembly: AssemblyProduct("BankDatabase")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d9069f49-4012-46ae-9492-8922be5557a4")]
+[assembly: Guid("efc18b36-09bc-4e6f-8dd8-21b4230da13d")]
 
 // Version information for an assembly consists of the following four values:
 //

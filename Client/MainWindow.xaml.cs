@@ -37,7 +37,7 @@ namespace Client
             //Set the URL and create the connection!
             string URL = "net.tcp://localhost:8100/DataService";
 
-            foobFactory = new ChannelFactory<BankServerInterface>(tcp,URL);
+            foobFactory = new ChannelFactory<BankServerInterface>(tcp, URL);
             foob = foobFactory.CreateChannel();
 
             //Also, tell me how many entries are in the DB.
@@ -61,7 +61,7 @@ namespace Client
             index = Int32.Parse(pIndex.Text);
 
             //Then, run our RPC function, using the out mode parameters... And Get All the Values for out
-            foob.GetValuesForEntry(index, out acct, out pin,out bal, out fName, out lName);
+            foob.GetValuesForEntry(index, out acct, out pin, out bal, out fName, out lName);
 
             pFirstName.Text = fName;
             pLastName.Text = lName;

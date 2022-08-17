@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tutorial1_Simple_WPF_APP
+namespace BankDatabase
 {
     public class DatabaseClass
     {
@@ -17,7 +17,7 @@ namespace Tutorial1_Simple_WPF_APP
             dataStructList = new List<DataStruct>(); // list of data struct object
             databaseGenerator = new DatabaseGenerator(); // database geneartor
 
-            for (int i = 0; i < 10; i++) 
+            for (int i = 0; i < 100; i++)
             {
                 /* Create a DataStruct Object */
 
@@ -25,18 +25,18 @@ namespace Tutorial1_Simple_WPF_APP
 
                 /* Generate the Data */
 
-                databaseGenerator.GetNextAccount(out dataStruct.pin, out dataStruct.accNo, 
-                    out dataStruct.firstName,out dataStruct.lastName,out dataStruct.balance);
+                databaseGenerator.GetNextAccount(out dataStruct.pin, out dataStruct.accNo,
+                    out dataStruct.firstName, out dataStruct.lastName, out dataStruct.balance);
 
                 /* Load the data into a List */
 
                 dataStructList.Add(dataStruct);
             }
-            
+
         }
 
 
-        public uint GetAcctNoByIndex(int index) 
+        public uint GetAcctNoByIndex(int index)
         {
             DataStruct dataStruct = dataStructList[index];
             uint accNo = dataStruct.accNo;
@@ -44,27 +44,27 @@ namespace Tutorial1_Simple_WPF_APP
             return accNo;
         }
 
-        public uint GetPINByIndex(int index) 
+        public uint GetPINByIndex(int index)
         {
             return dataStructList[index].pin;
         }
 
-        public string GetFirstNameByIndex(int index) 
+        public string GetFirstNameByIndex(int index)
         {
             return dataStructList[index].firstName;
         }
 
-        public string GetLaseNameByIndex(int index) 
+        public string GetLaseNameByIndex(int index)
         {
             return dataStructList[index].lastName;
         }
 
-        public int GetBalanceByIndex(int index) 
+        public int GetBalanceByIndex(int index)
         {
             return dataStructList[index].balance;
         }
 
-        public int GetNumRecords() 
+        public int GetNumRecords()
         {
             return dataStructList.Count;
         }

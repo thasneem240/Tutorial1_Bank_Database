@@ -1,10 +1,10 @@
-﻿using System;
+﻿using BankDatabase;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
-using Tutorial1_Simple_WPF_APP;
 
 namespace RemoteServer
 {
@@ -20,7 +20,7 @@ namespace RemoteServer
             database = new DatabaseClass();
         }
 
-        public int GetNumEntries() 
+        public int GetNumEntries()
         {
             return database.GetNumRecords();
         }
