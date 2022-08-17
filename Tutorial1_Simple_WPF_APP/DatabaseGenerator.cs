@@ -23,7 +23,7 @@ namespace Bank_Database
 
         private uint GetPIN()
         {
-            uint pinNo = 1234;
+            uint pinNo = 12;
             return pinNo;
         }
 

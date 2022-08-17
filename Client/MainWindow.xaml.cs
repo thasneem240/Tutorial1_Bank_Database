@@ -66,9 +66,9 @@ namespace Client
             pFirstName.Text = fName;
             pLastName.Text = lName;
             pAccNum.Text = acct.ToString();
-            pPinNo.Text = pin.ToString();
-            pBalance.Text = bal.ToString();
-            
+            pPinNo.Text = pin.ToString("D4"); // Padding with 0
+            pBalance.Text = bal.ToString("C"); // ("C") displays $
+
         }
     }
 }
