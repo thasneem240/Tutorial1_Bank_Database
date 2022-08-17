@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bank_Database
 {
-    internal class BankDetails
+    internal class DatabaseGenerator
     {
         private string GetFirstname() 
         {
