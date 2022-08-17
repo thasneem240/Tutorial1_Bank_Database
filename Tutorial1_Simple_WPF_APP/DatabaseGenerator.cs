@@ -8,6 +8,7 @@ namespace Bank_Database
 {
     internal class DatabaseGenerator
     {
+        static void Main() { }
         private string GetFirstname() 
         {
             string name = "Mohamed";
