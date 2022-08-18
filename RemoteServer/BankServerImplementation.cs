@@ -28,11 +28,21 @@ namespace RemoteServer
         public void GetValuesForEntry(int index, out uint accNo, out uint pin, out int bal,
             out string fName, out string lName)
         {
-            accNo = database.GetAcctNoByIndex(index);
-            pin = database.GetPINByIndex(index);
-            bal = database.GetBalanceByIndex(index);
-            fName = database.GetFirstNameByIndex(index);
-            lName = database.GetLaseNameByIndex(index);
+            if (index <= 0 || index > database.GetNumRecords())
+            {
+                //throw new ArgumentOutOfRangeException("index");
+                throw new FaultException("ArgumentOutOfRangeException For Index " + index);
+            }
+            else 
+            {
+                accNo = database.GetAcctNoByIndex(index);
+                pin = database.GetPINByIndex(index);
+                bal = database.GetBalanceByIndex(index);
+                fName = database.GetFirstNameByIndex(index);
+                lName = database.GetLaseNameByIndex(index);
+
+            }
+            
         }
     }
 }

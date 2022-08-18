@@ -57,17 +57,30 @@ namespace Client
             passing a null value to int Parse will throw an ArgumentNullException
             while passing a null value to Convert ToInt32 will give zero.*/
 
-            //On click, Get the index....
-            index = Int32.Parse(pIndex.Text);
+            try
+            {
+                //On click, Get the index....
+                index = Int32.Parse(pIndex.Text);
 
-            //Then, run our RPC function, using the out mode parameters... And Get All the Values for out
-            foob.GetValuesForEntry(index, out acct, out pin, out bal, out fName, out lName);
+              //Then, run our RPC function, using the out mode parameters... And Get All the Values for out
+                foob.GetValuesForEntry(index, out acct, out pin, out bal, out fName, out lName);
 
-            pFirstName.Text = fName;
-            pLastName.Text = lName;
-            pAccNum.Text = acct.ToString();
-            pPinNo.Text = pin.ToString("D4"); // Padding with 0
-            pBalance.Text = bal.ToString("C"); // ("C") displays $
+                pFirstName.Text = fName;
+                pLastName.Text = lName;
+                pAccNum.Text = acct.ToString();
+                pPinNo.Text = pin.ToString("D4"); // Padding with 0
+                pBalance.Text = bal.ToString("C"); // ("C") displays $
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show(ex.Message + " Please Input Integer Number as Index");
+            }
+            catch (FaultException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+            
 
         }
 

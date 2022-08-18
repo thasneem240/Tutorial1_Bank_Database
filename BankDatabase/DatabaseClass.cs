@@ -38,7 +38,7 @@ namespace BankDatabase
 
         public uint GetAcctNoByIndex(int index)
         {
-            DataStruct dataStruct = dataStructList[index];
+            DataStruct dataStruct = dataStructList[index-1];
             uint accNo = dataStruct.accNo;
 
             return accNo;
@@ -46,22 +46,22 @@ namespace BankDatabase
 
         public uint GetPINByIndex(int index)
         {
-            return dataStructList[index].pin;
+            return dataStructList[index-1].pin;
         }
 
         public string GetFirstNameByIndex(int index)
         {
-            return dataStructList[index].firstName;
+            return dataStructList[index - 1].firstName;
         }
 
         public string GetLaseNameByIndex(int index)
         {
-            return dataStructList[index].lastName;
+            return dataStructList[index - 1].lastName;
         }
 
         public int GetBalanceByIndex(int index)
         {
-            return dataStructList[index].balance;
+            return dataStructList[index - 1].balance;
         }
 
         public int GetNumRecords()
