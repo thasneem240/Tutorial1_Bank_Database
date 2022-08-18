@@ -1,6 +1,7 @@
 ﻿using RemoteServer;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.ServiceModel;
 using System.Text;
@@ -52,6 +53,7 @@ namespace Client
             string fName = "", lName = "";
             int bal = 0;
             uint acct = 0, pin = 0;
+            Bitmap bitmap = null;
 
             /* index = Convert.ToInt32(pIndex.Text);
             In brief, int.Parse and Convert ToInt32 are two methods to convert a string to an integer. 
@@ -64,8 +66,10 @@ namespace Client
                 //On click, Get the index....
                 index = Int32.Parse(pIndex.Text);
 
-              //Then, run our RPC function, using the out mode parameters... And Get All the Values for out
-                foob.GetValuesForEntry(index, out acct, out pin, out bal, out fName, out lName);
+              //Then, run our RPC function, using the out mode parameters... And Get All
+              //the Values for out
+                foob.GetValuesForEntry(index, out acct, out pin, out bal, 
+                    out fName, out lName, out bitmap);
 
                 pFirstName.Text = fName;
                 pLastName.Text = lName;
