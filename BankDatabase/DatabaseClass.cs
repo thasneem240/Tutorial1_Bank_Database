@@ -26,7 +26,8 @@ namespace BankDatabase
                 /* Generate the Data */
 
                 databaseGenerator.GetNextAccount(out dataStruct.pin, out dataStruct.accNo,
-                    out dataStruct.firstName, out dataStruct.lastName, out dataStruct.balance);
+                    out dataStruct.firstName, out dataStruct.lastName, out dataStruct.balance,
+                    out dataStruct.bitmap);
 
                 /* Load the data into a List */
 
