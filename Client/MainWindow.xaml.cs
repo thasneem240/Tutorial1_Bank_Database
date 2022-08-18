@@ -123,6 +123,7 @@ namespace Client
             pAccNum.Text = "";
             pPinNo.Text = "";
             pBalance.Text = "";
+            profile.Source = null;
         }
 
     }
