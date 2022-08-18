@@ -101,9 +101,6 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="avatar.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\BankDatabase\BankDatabase.csproj">
       <Project>{EFC18B36-09BC-4E6F-8DD8-21B4230DA13D}</Project>
       <Name>BankDatabase</Name>

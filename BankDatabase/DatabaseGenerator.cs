@@ -24,7 +24,9 @@ namespace Bank_Database
             "Moody", "Lindsey", "Gross", "Sherman", "Simon", "Jones", "Brown", "Garcia", "Rodriguez",
             "Lee", "Young", "Hall" };
 
-
+        private string[] arrOfImages = { "P1.jpg", "P2.jpg", "P3.jpg", "P4.jpg", "P5.jpg", "P6.jpg",
+        "P7.jpg","P8.jpg","P9.jpg","P10.jpg","P11.jpg","P12.jpg","P13.jpg","P14.jpg","P15.jpg","P16.jpg",
+        "P17.jpg","P18.jpg","P19.png","P20.png",};
 
         private string GetFirstname()
         {
@@ -61,26 +63,31 @@ namespace Bank_Database
         }
 
 
-        private Bitmap GetProfilePicture() 
+        private string GetProfilePicture() 
         {
             // Read Image
-            Bitmap bitmap = null;
+
             //Bitmap bitmap = new Bitmap("C: \\Users\\Thasneem2\\OneDrive\\Pictures\\avatar.png");
 
-            return bitmap;
+            int index = rand.Next(arrOfImages.Length);
+            string imageName = arrOfImages[index];
+          
+            string fileName = "C:\\Users\\Thasneem2\\OneDrive\\Pictures\\Profile_Pictures\\" + imageName;
+       
+            return fileName;
         }
 
 
         /* get Next Account Info */
         public void GetNextAccount(out uint pin, out uint accNo, out string firstName,
-            out string lastName, out int balance, out Bitmap bitmap)
+            out string lastName, out int balance, out string imageLocation)
         {
             pin = GetPIN();
             accNo = GetAcctNo();
             firstName = GetFirstname();
             lastName = GetLastname();
             balance = GetBalance();
-            bitmap = GetProfilePicture();
+            imageLocation = GetProfilePicture();
         }
 
 

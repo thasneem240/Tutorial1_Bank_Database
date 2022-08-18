@@ -28,7 +28,7 @@ namespace BankDatabase
 
                 databaseGenerator.GetNextAccount(out dataStruct.pin, out dataStruct.accNo,
                     out dataStruct.firstName, out dataStruct.lastName, out dataStruct.balance,
-                    out dataStruct.bitmap);
+                    out dataStruct.imageLocation);
 
                 /* Load the data into a List */
 
@@ -66,9 +66,9 @@ namespace BankDatabase
             return dataStructList[index - 1].balance;
         }
 
-        public Bitmap GetProfilePictureByIndex(int index) 
+        public string GetProfilePictureByIndex(int index) 
         {
-            return dataStructList[index - 1].bitmap;
+            return dataStructList[index - 1].imageLocation;
         }
         public int GetNumRecords()
         {

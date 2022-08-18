@@ -14,7 +14,7 @@ namespace Bank_Database
         public int balance;
         public string firstName;
         public string lastName;
-        public Bitmap bitmap;
+        public string imageLocation;
 
         public DataStruct()
         {
@@ -23,7 +23,7 @@ namespace Bank_Database
             balance = 0;
             firstName = "";
             lastName = "";
-            bitmap = null;
+            imageLocation = "";
         }
 
         public override string ToString()

@@ -17,6 +17,6 @@ namespace BankDatabase
         [OperationContract]
         [FaultContract(typeof(Exception))]
         void GetValuesForEntry(int index, out uint accNo, out uint pin, out int bal,
-            out string fName, out string lName, out Bitmap bitmap);
+            out string fName, out string lName, out string bitmapLocation);
     }
 }

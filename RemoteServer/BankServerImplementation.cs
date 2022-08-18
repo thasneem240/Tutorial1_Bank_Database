@@ -27,7 +27,7 @@ namespace RemoteServer
         }
 
         public void GetValuesForEntry(int index, out uint accNo, out uint pin, out int bal,
-            out string fName, out string lName, out Bitmap bitmap)
+            out string fName, out string lName, out string imageLocation)
         {
             if (index <= 0 || index > database.GetNumRecords())
             {
@@ -40,7 +40,7 @@ namespace RemoteServer
                 bal = database.GetBalanceByIndex(index);
                 fName = database.GetFirstNameByIndex(index);
                 lName = database.GetLaseNameByIndex(index);
-                bitmap = database.GetProfilePictureByIndex(index);
+                imageLocation = database.GetProfilePictureByIndex(index);
 
             }
 
