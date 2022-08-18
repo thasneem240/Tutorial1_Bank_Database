@@ -1,6 +1,7 @@
 ﻿using Bank_Database;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -65,6 +66,10 @@ namespace BankDatabase
             return dataStructList[index - 1].balance;
         }
 
+        public Bitmap GetProfilePictureByIndex(int index) 
+        {
+            return dataStructList[index - 1].bitmap;
+        }
         public int GetNumRecords()
         {
             return dataStructList.Count;
