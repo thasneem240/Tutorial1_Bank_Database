@@ -9,11 +9,13 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace Client
 {
@@ -73,14 +75,21 @@ namespace Client
             }
             catch (FormatException ex)
             {
-                MessageBox.Show(ex.Message + " Please Input Integer Number as Index");
+                // MessageBox.Show(ex.Message + " Please Input Integer Number as Index");
+
+                MessageBox.Show(ex.Message + " Please Input Integer Number as Index",
+                    "Format Exception",MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 /* Empty the Input Field */
                 pIndex.Text = "";
             }
             catch (FaultException ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Fault Exception", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+
+                /* Empty the Input Field */
+                pIndex.Text = "";
             }
             
             
