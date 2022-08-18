@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ namespace Bank_Database
         public int balance;
         public string firstName;
         public string lastName;
+        public Bitmap bitmap;
 
         public DataStruct()
         {
@@ -21,6 +23,7 @@ namespace Bank_Database
             balance = 0;
             firstName = "";
             lastName = "";
+            bitmap = null;
         }
 
         public override string ToString()
