@@ -70,5 +70,6 @@ namespace Client
             pBalance.Text = bal.ToString("C"); // ("C") displays $
 
         }
+
     }
 }
