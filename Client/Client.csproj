@@ -96,6 +96,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\RemoteServer\RemoteServer.csproj">
       <Project>{2D9F7DF5-8508-476C-B986-7722CFE34E9D}</Project>
       <Name>RemoteServer</Name>

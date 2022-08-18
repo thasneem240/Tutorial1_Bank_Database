@@ -30,7 +30,6 @@ namespace RemoteServer
         {
             if (index <= 0 || index > database.GetNumRecords())
             {
-                //throw new ArgumentOutOfRangeException("index");
                 throw new FaultException("ArgumentOutOfRangeException For Index " + index);
             }
             else 

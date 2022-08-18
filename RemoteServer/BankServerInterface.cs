@@ -14,6 +14,7 @@ namespace RemoteServer
         int GetNumEntries();
 
         [OperationContract]
+        [FaultContract(typeof(Exception))]
         void GetValuesForEntry(int index, out uint accNo, out uint pin, out int bal,
             out string fName, out string lName);
     }

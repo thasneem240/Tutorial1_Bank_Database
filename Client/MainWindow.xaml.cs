@@ -74,6 +74,9 @@ namespace Client
             catch (FormatException ex)
             {
                 MessageBox.Show(ex.Message + " Please Input Integer Number as Index");
+
+                /* Empty the Input Field */
+                pIndex.Text = "";
             }
             catch (FaultException ex)
             {
