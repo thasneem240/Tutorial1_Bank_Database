@@ -64,8 +64,8 @@ namespace Bank_Database
         private Bitmap GetProfilePicture() 
         {
             // Read Image
-
-            Bitmap bitmap = new Bitmap("C: \\Users\\Thasneem2\\OneDrive\\Pictures\\avatar.png");
+            Bitmap bitmap = null;
+            //Bitmap bitmap = new Bitmap("C: \\Users\\Thasneem2\\OneDrive\\Pictures\\avatar.png");
 
             return bitmap;
         }
