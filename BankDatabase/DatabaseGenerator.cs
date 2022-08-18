@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -60,15 +61,26 @@ namespace Bank_Database
         }
 
 
+        private Bitmap GetProfilePicture() 
+        {
+            // Read Image
+
+            Bitmap bitmap = new Bitmap("C: \\Users\\Thasneem2\\OneDrive\\Pictures\\avatar.png");
+
+            return bitmap;
+        }
+
+
         /* get Next Account Info */
         public void GetNextAccount(out uint pin, out uint accNo, out string firstName,
-            out string lastName, out int balance)
+            out string lastName, out int balance, out Bitmap bitmap)
         {
             pin = GetPIN();
             accNo = GetAcctNo();
             firstName = GetFirstname();
             lastName = GetLastname();
             balance = GetBalance();
+            bitmap = GetProfilePicture();
         }
 
 
