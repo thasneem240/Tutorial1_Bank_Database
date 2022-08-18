@@ -1,4 +1,4 @@
-﻿using RemoteServer;
+﻿using BankDatabase;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -34,7 +34,7 @@ namespace Client
 
             /* This is a factory that generates remote connections to our remote class. This 
                is what hides the RPC stuff! */
-            ChannelFactory<RemoteServer.BankServerInterface> foobFactory;
+            ChannelFactory<BankDatabase.BankServerInterface> foobFactory;
             NetTcpBinding tcp = new NetTcpBinding();
 
             //Set the URL and create the connection!

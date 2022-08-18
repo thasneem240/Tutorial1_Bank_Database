@@ -101,13 +101,13 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RemoteServer\RemoteServer.csproj">
-      <Project>{2D9F7DF5-8508-476C-B986-7722CFE34E9D}</Project>
-      <Name>RemoteServer</Name>
-    </ProjectReference>
+    <Resource Include="avatar.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="avatar.png" />
+    <ProjectReference Include="..\BankDatabase\BankDatabase.csproj">
+      <Project>{EFC18B36-09BC-4E6F-8DD8-21B4230DA13D}</Project>
+      <Name>BankDatabase</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
